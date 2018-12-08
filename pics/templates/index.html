@@ -2,9 +2,53 @@
 {% block content %}
 {{ block.super}}
 
-
-
 <h2>Welcome to My Gallery</h2>
 
+{% for c in content %}
+  <img src="{{c.image.url}}" style="height:200px; width: 300px" class="img-responsive" alt="Image" data-toggle="modal" data-target="#exampleModal{{c.id}}">
+{% endfor %}
+
+{% for c in content %}
+<div class="modal fade" id="exampleModal{{c.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content" style="text-align:center;">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel" style="text-align:center;"><b>{{c.name}}</b></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="card">
+          <img class="card-img-top" style="height:300px; width: 400px; margin-left: 30px; margin-right: 0; padding-right: 0;" src="{{c.image.url}}" alt="Image" data-toggle="modal" data-target="#exampleModal{{c.id}}">
+          <div class="card-body">
+            <p><b>Description:</b> {{c.description}}</p>
+            <a href="https://odipojamesgallery.herokuapp.com{{c.image.url}}">Image Link</a>
+            <button type="button" name="button" class="container-fluid btn btn-secondary" value="https://odipojamesgallery.herokuapp.com{{c.image.url}}" onclick="copylink(this.value)">Copy Image Link</button>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+function copylink(value) {
+    console.log('hi James')
+    function handler(event){
+        event.clipboardData.setData('text/plain', value);
+        event.preventDefault();
+        document.removeEventListener('copy', handler, true);
+    }
+    document.addEventListener('copy', handler, true);
+    document.execCommand('copy');
+}
+</script>
+
+{% endfor %}
 
 {% endblock %}
