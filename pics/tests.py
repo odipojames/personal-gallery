@@ -36,3 +36,20 @@ class ImageTest(TestCase):
         self.new_image.save()
         image = Image.image_cat(self.new_category)
         self.assertTrue(len(image) > 0)
+
+
+class CategoryTest(TestCase):
+
+    def setUp(self):
+        self.new_category = Category.objects.create(category='fun')
+
+    def test_instance(self):
+        self.assertTrue(isinstance(self.new_category,Category))
+
+class PlacesTest(TestCase):
+
+    def setUp(self):
+        self.new_town = Places.objects.create(location='nairobi')
+
+    def test_instance(self):
+        self.assertTrue(isinstance(self.new_town,Places))
