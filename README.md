@@ -25,7 +25,7 @@ run the app using
 
 **Running**
 
-visit the link ; https.herokuapp.com
+visit the link ; https://gallary-ip.herokuapp.com/ 
 
 ## Technologies Used
 * python3.6 ; Django framework
