@@ -1,4 +1,4 @@
-#!/home/odipo/Documents/personal-gallery/virtual/bin/python3.6
+#!/home/odipo/Documents/personal-gallery/virtual/bin/python
 from django.core import management
 
 if __name__ == "__main__":
