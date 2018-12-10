@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
-
 {% block content %}
+{{ block.super}}
+
 
 {% for c in content %}
   <img src="{{c.image.url}}" style="height:200px; width: 300px;" class="img-responsive" alt="Image" data-toggle="modal" data-target="#exampleModal{{c.id}}">
@@ -21,6 +22,7 @@
           <img class="card-img-top" style="height:300px; width: 400px; margin-left: 30px; margin-right: 0; padding-right: 0;" src="{{c.image.url}}" alt="Image" data-toggle="modal" data-target="#exampleModal{{c.id}}">
           <div class="card-body">
             <p><b>Description:</b> {{c.description}}</p>
+            <p><b>Date posted:</b> {{c.p_date}}</p>
             <a href="#{{c.image.url}}">Image Link</a>
             <button type="button" name="button" class="container-fluid btn btn-secondary" value="#{{c.image.url}}" onclick="copylink(this.value)">Copy Image Link</button>
           </div>

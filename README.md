@@ -1,6 +1,6 @@
-#Gallery
+# Gallery
 
-##Written By :
+## Written By :
 
 **James ODIPO**
 
