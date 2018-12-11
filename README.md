@@ -1,6 +1,6 @@
 # Gallery
 
-## Written By :
+## Developed By :
 
 **James ODIPO**
 
