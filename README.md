@@ -25,17 +25,19 @@ run the app using
 
 **Running**
 
-visit the link ; https://gallary-ip.herokuapp.com/ 
+visit the link ; https://gallary-ip.herokuapp.com/
 
 ## Technologies Used
 * python3.6 ; Django framework
 * PostgreSQL
 * CSS
+* bootstrap4
 
 ## Acknowledgments
 * Moringa School
 * Google
 * Bootsrtap Documentation
+* TM's
 
 
 ## License
